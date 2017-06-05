@@ -1,9 +1,28 @@
+$(document).ready(function() {
+
+  $("#animalsView").on("click", '.gif', function() {
+    console.log('click');
+    var state = $(this).attr("data-state");
+    
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).data("still"));
+      $(this).attr("data-state", "still");
+    }
+  }) 
+  $(".gif").hide();
+  $("#buttons").click(function() {
+  $("#gif").show();
+  });
+
 	var animals = ['dog', 'cat', 'monkey', 'giraffee', 'lion','elephant', 'kangaroo', 'panda', 'polar bear', 'bald eagle', 'owl', 'cheetah', 'rabbit', 'dolphin']; 
 	 
 	function displayanimalInfo(){
 		var animal = $(this).attr('data-name');
 	
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 		$.ajax({url: queryURL, method: 'GET'})
 	     .done(function(response) {
 	         var results = response.data;
@@ -19,10 +38,14 @@
 	             var rating = results[i].rating;
 	             var p = $('<p>').text( "Rating: " + rating);
 	             var animalImage = $('<img>');
-	            
-	             animalImage.attr('src', results[i].images.fixed_height.url);
-	             animalDiv.append(p)
-	             animalDiv.append(animalImage)
+
+	            animalImage.attr("src", results[i].images.fixed_height.url);
+               	animalImage.attr('class', 'gif');
+                animalImage.attr('data-animate', results[i].images.fixed_height.url);
+                animalImage.attr('data-still', results[i].images.fixed_height_still.url);
+                animalImage.attr('data-state', 'animate'); 
+	            animalDiv.append(p)
+	            animalDiv.append(animalImage)
 	             $('#animalsView').prepend(animalDiv);               
 	            }
 	         }
@@ -50,12 +73,12 @@
 		
 		animals.push(animal);
 		
-		
 		renderButtons();
 		
 		return false;
 	})
 	
 	$(document).on('click', '.animal', displayanimalInfo);
-	
-	renderButtons();
+	 
+	renderButtons(); 
+});
