@@ -17,7 +17,7 @@ $(document).ready(function() {
   $("#gif").show();
   });
 
-	var animals = ['dog', 'cat', 'monkey', 'giraffee', 'lion','elephant', 'kangaroo', 'panda', 'polar bear', 'bald eagle', 'owl', 'cheetah', 'rabbit', 'dolphin']; 
+	var animals = ['dog', 'cat', 'monkey', 'giraffe', 'lion','elephant', 'kangaroo', 'panda', 'polar bear', 'bald eagle', 'owl', 'cheetah', 'rabbit', 'dolphin']; 
 	 
 	function displayanimalInfo(){
 		var animal = $(this).attr('data-name');
