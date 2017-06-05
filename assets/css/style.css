@@ -4,3 +4,8 @@ button,
 		input {
 			margin: 10px;
 		} 
+h1 {
+	color: #0000ff;
+	font-size: 40px;
+	font-weight: bold;
+}
