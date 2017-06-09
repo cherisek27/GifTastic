@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  $("#animalsView").on("click", '.gif', function() {
-    console.log('click');
+  $("#animalsView").on("click", ".gif", function() {
+    console.log("click");
     var state = $(this).attr("data-state");
     
     if (state === "still") {
@@ -14,7 +14,7 @@ $(document).ready(function() {
   }) 
   $(".gif").hide();
   $("#buttons").click(function() {
-  $("#gif").show();
+  $(".gif").show();
   });
 
 	var animals = ['dog', 'cat', 'monkey', 'giraffe', 'lion','elephant', 'kangaroo', 'panda', 'polar bear', 'bald eagle', 'owl', 'cheetah', 'rabbit', 'dolphin']; 
