@@ -2,9 +2,7 @@
 
 ### Overview
 
-In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
-
-![GIPHY](Images/1-giphy.jpg)
+Use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
 
 ### Before You Begin
 
@@ -17,9 +15,7 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
    * Like many APIs, GIPHY requires developers to use a key to access their API data. For now, you can use their [public API key](https://github.com/Giphy/GiphyAPI#public-beta-key).
    * Make sure you switch the protocol in the query URL from **`http to https`**, or the app may not work properly when deployed to Heroku.
 
-2. **[Watch the demo video](homework_demo.mov)**
-
-   * You should have a high-level understanding of how this assignment works before attempting to code it.
+2. * You should have a high-level understanding of how this assignment works before attempting to code it.
 
 ### Instructions
 
@@ -39,16 +35,4 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
 
 6. Add a form to your page takes the value from a user input box and adds it into your `topics` array. Then make a function call that takes each topic in the array remakes the buttons on the page.
 
-7. **Rejoice**! You just made something really cool.
 
-- - -
-
-### One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-**Good Luck!**
-
-## Copyright
-
-Coding Boot Camp (C) 2016. All Rights Reserved.
